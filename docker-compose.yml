@@ -27,10 +27,3 @@ services:
       #- ./models:/import/models   # Once you import files, you don't need to mount again.
       #- ./outputs:/import/outputs  # Once you import files, you don't need to mount again.
     tty: true
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              device_ids: ['0']
-              capabilities: [compute, utility]
